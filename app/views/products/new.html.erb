@@ -1,0 +1,64 @@
+<div class="container-fluid main_container d-flex" style="min-height: 100vh;">
+  <div class="row border flex-fill">
+    <div class="col h-100">
+
+      <div class="row border" style="height: 25%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="mh-100 text-center" style="font-size: 10vh;">Create New Product</p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 15%; background-color: #20c997;">
+        <div class="col">
+          <%= link_to '<button type="button" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Back</button>'.html_safe, controller:  'products' %>
+        </div>
+      </div>
+
+      <%= form_with model: @product, local: true do |form| %>
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p>
+              <%= form.label :name %><br>
+            </p>
+          </div>
+          <div class="col-8 form-group">
+            <p class="form-control">
+              <%= form.text_field :name %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p>
+              <%= form.label :dimension %><br>
+              <%= form.text_area :dimension %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p>
+              <%= form.label :price %><br>
+              <%= form.text_area :price %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #20c997;">
+          <div class="col">
+            <%= link_to '<button type="submit" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Create</button>'.html_safe, controller:  'products' %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row border" style="height: 10%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="text-center" style="font-size: 5vh;">Trademark Information - &#169; esoterickeys</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,17 +1,31 @@
-<div class="container-fluid">
-  <div class="row borders bg-success" style="border:1px solid #1a66ff; height:100px; font-size: 50px;">
-    <p class="text-center">Company Name</p>
-  </div>
+<div class="container-fluid main_container d-flex" style="min-height: 100vh;">
+  <div class="row border flex-fill">
+    <div class="col h-100">
 
-  <div class="row bg-info text-center" style="border:1px solid #1a66ff; height:50px;">
-    <%= link_to '<button type="button" class="btn btn-primary btn-block">Back</button>'.html_safe, controller:  'splash' %>
-  </div>
+      <div class="row border" style="height: 30%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="mh-100 text-center" style="font-size: 10vh;">Company Name</p>
+        </div>
+      </div>
 
-  <div class="row bg-info text-center" style="border:1px solid #1a66ff; height:50px;">
-    <p class="text-center">Contact system admin at - sectorten@gmail.com</p>
-  </div>
+      <div class="row border" style="height: 20%; background-color: #20c997;">
+        <div class="col">
+          <%= link_to '<button type="button" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Back</button>'.html_safe, controller:  'splash' %>
+        </div>
+      </div>
 
-  <div class="row bg-success" style="border:1px solid #1a66ff; height:25px; font-size: 14px;">
-    <footer class="text-center bg-success">Trademark</footer>
+      <div class="row border" style="height: 40%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="mh-100 text-center" style="font-size: 10vh;">Contact system admin at - sectorten@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 10%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="text-center" style="font-size: 5vh;">Trademark Information - &#169; esoterickeys</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
