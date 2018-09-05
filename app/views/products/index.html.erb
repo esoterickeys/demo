@@ -31,10 +31,10 @@
             </tr>
             <% @products.each do |product| %>
               <tr>
-                <td><%= product.name %></td>
-                <td><%= product.dimension %></td>
-                <td><%= product.price %></td>
-                <td><%= link_to 'Details', product_path(product) %>  <%= link_to 'Update', edit_product_path(product) %>  <%= link_to 'Remove', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td style="font-size: 5vh;"><%= product.name %></td>
+                <td style="font-size: 5vh;"><%= product.dimension %></td>
+                <td style="font-size: 5vh;"><%= product.price %></td>
+                <td style="font-size: 2vh;"><%= link_to 'Details', product_path(product) %><br><%= link_to 'Update', edit_product_path(product) %><br><%= link_to 'Remove', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </table>

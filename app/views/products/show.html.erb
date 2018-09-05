@@ -1,16 +1,67 @@
-<p>
-  <strong>Name: </strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid main_container d-flex" style="min-height: 100vh;">
+  <div class="row border flex-fill">
+    <div class="col h-100">
 
-<p>
-  <strong>Dimension:</strong>
-  <%= @product.dimension %>
-</p>
+      <div class="row border" style="height: 25%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="mh-100 text-center" style="font-size: 10vh;"><%= @product.name %></p>
+        </div>
+      </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <div class="row border" style="height: 15%; background-color: #20c997;">
+        <div class="col">
+          <%= link_to '<button type="button" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Back</button>'.html_safe, controller:  'products' %>
+        </div>
+      </div>
 
-<%= link_to 'Back', products_path %>
+      <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+        <div class="col">
+          <p class="text-right" style="font-size: 5vh;">
+            <strong>Name</strong>
+          </p>
+        </div>
+
+        <div class="col-10">
+          <p class="w-100 h-100 mh-100" style="font-size: 6vh;">
+            <%= @product.name %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+        <div class="col">
+          <p class="text-right" style="font-size: 5vh;">
+            <strong>Dimension</strong>
+          </p>
+        </div>
+
+        <div class="col-10">
+          <p class="w-100 h-100 mh-100" style="font-size: 6vh;">
+            <%= @product.dimension %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+        <div class="col">
+          <p class="text-right" style="font-size: 5vh;">
+            <strong>Price</strong>
+          </p>
+        </div>
+
+        <div class="col-10">
+          <p class="w-100 h-100 mh-100" style="font-size: 6vh;">
+            <%= @product.price %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 10%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="text-center" style="font-size: 5vh;">Trademark Information - &#169; esoterickeys</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

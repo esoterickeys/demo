@@ -17,38 +17,49 @@
       <%= form_with model: @product, local: true do |form| %>
         <div class="row border" style="height: 15%; background-color: #d9d9d9;">
           <div class="col">
-            <p>
-              <%= form.label :name %><br>
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :name %>
             </p>
           </div>
-          <div class="col-8 form-group">
-            <p class="form-control">
-              <%= form.text_field :name %>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :name, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
             </p>
           </div>
         </div>
 
         <div class="row border" style="height: 15%; background-color: #d9d9d9;">
           <div class="col">
-            <p>
-              <%= form.label :dimension %><br>
-              <%= form.text_area :dimension %>
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :dimension %>
+            </p>
+          </div>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :dimension, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
             </p>
           </div>
         </div>
 
         <div class="row border" style="height: 15%; background-color: #d9d9d9;">
           <div class="col">
-            <p>
-              <%= form.label :price %><br>
-              <%= form.text_area :price %>
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :price %>
             </p>
           </div>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :price, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
+            </p>
+         </div>
         </div>
 
         <div class="row border" style="height: 15%; background-color: #20c997;">
           <div class="col">
-            <%= link_to '<button type="submit" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Create</button>'.html_safe, controller:  'products' %>
+            <%= form.submit 'Create', :class => 'btn btn-primary btn-block h-100', :style => 'font-size: 8vh; opacity: .7; background-color: #008CBA;' %>
           </div>
         </div>
       <% end %>

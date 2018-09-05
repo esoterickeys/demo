@@ -1,38 +1,75 @@
-<%= form_with model: @product, local: true do |form| %>
+<div class="container-fluid main_container d-flex" style="min-height: 100vh;">
+  <div class="row border flex-fill">
+    <div class="col h-100">
 
-  <% if @product.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@product.errors.count, "error") %> prohibited
-        this product from being saved:
-      </h2>
-      <ul>
-        <% @product.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+      <div class="row border" style="height: 25%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="mh-100 text-center" style="font-size: 10vh;">Edit <%= @product.name %></p>
+        </div>
+      </div>
+
+      <div class="row border" style="height: 15%; background-color: #20c997;">
+        <div class="col">
+          <%= link_to '<button type="button" class="btn btn-primary btn-block h-100" style="font-size: 8vh; opacity: .7; background-color: #008CBA;">Back</button>'.html_safe, controller:  'products' %>
+        </div>
+      </div>
+
+      <%= form_with model: @product, local: true do |form| %>
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :name %>
+            </p>
+          </div>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :name, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :dimension %>
+            </p>
+          </div>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :dimension, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #d9d9d9;">
+          <div class="col">
+            <p class="text-right" style="font-size: 6vh;">
+              <%= form.label :price %>
+            </p>
+          </div>
+
+          <div class="col-10">
+            <p class="h-100">
+              <%= form.text_field :price, :class => 'w-100 h-100 mh-100', :style => 'font-size: 6vh;' %>
+            </p>
+          </div>
+        </div>
+
+        <div class="row border" style="height: 15%; background-color: #20c997;">
+          <div class="col">
+            <%= form.submit 'Edit', :class => 'btn btn-primary btn-block h-100', :style => 'font-size: 8vh; opacity: .7; background-color: #008CBA;' %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row border" style="height: 10%; background-color: #20c997">
+        <div class="col mh-100 justify-content-center align-self-center">
+          <p class="text-center" style="font-size: 5vh;">Trademark Information - &#169; esoterickeys</p>
+        </div>
+      </div>
+
     </div>
-  <% end %>
-
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :dimension %><br>
-    <%= form.text_area :dimension %>
-  </p>
-
-  <p>
-    <%= form.label :price %><br>
-    <%= form.text_area :price %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
-
-<%= link_to 'Back', products_path %>
+  </div>
+</div>
